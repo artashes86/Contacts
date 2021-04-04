@@ -1,6 +1,7 @@
 package com.example.contacts
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,7 @@ class ContactsAdapter(val context: Context, val data: List<DataContacts>) : Recy
         holder.textName.text = data[position].title
         holder.textNumber.text = data[position].description
         holder.iconImg.setImageResource(data[position].icon)
+        Log.d("x", "yyyy $position")
     }
 
     override fun getItemCount(): Int {
